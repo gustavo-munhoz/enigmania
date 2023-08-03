@@ -19,6 +19,7 @@
 		B342D1B22A7C484B00F26941 /* UILabel+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B12A7C484B00F26941 /* UILabel+ext.swift */; };
 		B342D1B42A7C485200F26941 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B32A7C485200F26941 /* GameController.swift */; };
 		B342D1B62A7C485500F26941 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B52A7C485500F26941 /* Helper.swift */; };
+		B342D1B82A7C49A800F26941 /* BaksoSapi.otf in Resources */ = {isa = PBXBuildFile; fileRef = B342D1B72A7C49A800F26941 /* BaksoSapi.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B342D1B12A7C484B00F26941 /* UILabel+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ext.swift"; sourceTree = "<group>"; };
 		B342D1B32A7C485200F26941 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B342D1B52A7C485500F26941 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B342D1B72A7C49A800F26941 /* BaksoSapi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BaksoSapi.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		B342D1A42A7C47E600F26941 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B342D1B72A7C49A800F26941 /* BaksoSapi.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				B342D1982A7C46E700F26941 /* LaunchScreen.storyboard in Resources */,
 				B342D1952A7C46E700F26941 /* Assets.xcassets in Resources */,
+				B342D1B82A7C49A800F26941 /* BaksoSapi.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +360,9 @@
 				INFOPLIST_FILE = enigmania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,8 +388,9 @@
 				INFOPLIST_FILE = enigmania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
