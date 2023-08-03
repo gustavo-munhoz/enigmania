@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		B342D18C2A7C46E600F26941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D18B2A7C46E600F26941 /* AppDelegate.swift */; };
 		B342D18E2A7C46E600F26941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D18D2A7C46E600F26941 /* SceneDelegate.swift */; };
-		B342D1902A7C46E600F26941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D18F2A7C46E600F26941 /* ViewController.swift */; };
-		B342D1932A7C46E600F26941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B342D1912A7C46E600F26941 /* Main.storyboard */; };
 		B342D1952A7C46E700F26941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B342D1942A7C46E700F26941 /* Assets.xcassets */; };
 		B342D1982A7C46E700F26941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B342D1962A7C46E700F26941 /* LaunchScreen.storyboard */; };
+		B342D1A72A7C481000F26941 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1A62A7C481000F26941 /* StartViewController.swift */; };
+		B342D1AA2A7C481C00F26941 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1A92A7C481C00F26941 /* QuizViewController.swift */; };
+		B342D1AC2A7C482300F26941 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1AB2A7C482300F26941 /* TutorialViewController.swift */; };
+		B342D1AE2A7C483C00F26941 /* NSLayoutConstraint+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1AD2A7C483C00F26941 /* NSLayoutConstraint+ext.swift */; };
+		B342D1B02A7C484400F26941 /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1AF2A7C484400F26941 /* UIImage+ext.swift */; };
+		B342D1B22A7C484B00F26941 /* UILabel+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B12A7C484B00F26941 /* UILabel+ext.swift */; };
+		B342D1B42A7C485200F26941 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B32A7C485200F26941 /* GameController.swift */; };
+		B342D1B62A7C485500F26941 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B52A7C485500F26941 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B342D1882A7C46E600F26941 /* enigmania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = enigmania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B342D18B2A7C46E600F26941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B342D18D2A7C46E600F26941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B342D18F2A7C46E600F26941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B342D1922A7C46E600F26941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B342D1942A7C46E700F26941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B342D1972A7C46E700F26941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B342D1992A7C46E700F26941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B342D1A62A7C481000F26941 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B342D1A92A7C481C00F26941 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		B342D1AB2A7C482300F26941 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		B342D1AD2A7C483C00F26941 /* NSLayoutConstraint+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+ext.swift"; sourceTree = "<group>"; };
+		B342D1AF2A7C484400F26941 /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
+		B342D1B12A7C484B00F26941 /* UILabel+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ext.swift"; sourceTree = "<group>"; };
+		B342D1B32A7C485200F26941 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		B342D1B52A7C485500F26941 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,69 @@
 		B342D18A2A7C46E600F26941 /* enigmania */ = {
 			isa = PBXGroup;
 			children = (
-				B342D18B2A7C46E600F26941 /* AppDelegate.swift */,
-				B342D18D2A7C46E600F26941 /* SceneDelegate.swift */,
-				B342D18F2A7C46E600F26941 /* ViewController.swift */,
-				B342D1912A7C46E600F26941 /* Main.storyboard */,
+				B342D1A52A7C47ED00F26941 /* common */,
+				B342D1A42A7C47E600F26941 /* Fonts */,
+				B342D1A32A7C47DA00F26941 /* Shared */,
+				B342D19F2A7C479500F26941 /* Model */,
+				B342D1A12A7C47B300F26941 /* View */,
+				B342D1A22A7C47C100F26941 /* Controller */,
 				B342D1942A7C46E700F26941 /* Assets.xcassets */,
 				B342D1962A7C46E700F26941 /* LaunchScreen.storyboard */,
 				B342D1992A7C46E700F26941 /* Info.plist */,
 			);
 			path = enigmania;
+			sourceTree = "<group>";
+		};
+		B342D19F2A7C479500F26941 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B342D1A12A7C47B300F26941 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B342D1AD2A7C483C00F26941 /* NSLayoutConstraint+ext.swift */,
+				B342D1AF2A7C484400F26941 /* UIImage+ext.swift */,
+				B342D1B12A7C484B00F26941 /* UILabel+ext.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B342D1A22A7C47C100F26941 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B342D1A62A7C481000F26941 /* StartViewController.swift */,
+				B342D1A92A7C481C00F26941 /* QuizViewController.swift */,
+				B342D1AB2A7C482300F26941 /* TutorialViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B342D1A32A7C47DA00F26941 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B342D1B32A7C485200F26941 /* GameController.swift */,
+				B342D1B52A7C485500F26941 /* Helper.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B342D1A42A7C47E600F26941 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B342D1A52A7C47ED00F26941 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B342D18B2A7C46E600F26941 /* AppDelegate.swift */,
+				B342D18D2A7C46E600F26941 /* SceneDelegate.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +193,6 @@
 			files = (
 				B342D1982A7C46E700F26941 /* LaunchScreen.storyboard in Resources */,
 				B342D1952A7C46E700F26941 /* Assets.xcassets in Resources */,
-				B342D1932A7C46E600F26941 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +203,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B342D1902A7C46E600F26941 /* ViewController.swift in Sources */,
+				B342D1B02A7C484400F26941 /* UIImage+ext.swift in Sources */,
 				B342D18C2A7C46E600F26941 /* AppDelegate.swift in Sources */,
 				B342D18E2A7C46E600F26941 /* SceneDelegate.swift in Sources */,
+				B342D1AC2A7C482300F26941 /* TutorialViewController.swift in Sources */,
+				B342D1B42A7C485200F26941 /* GameController.swift in Sources */,
+				B342D1AE2A7C483C00F26941 /* NSLayoutConstraint+ext.swift in Sources */,
+				B342D1A72A7C481000F26941 /* StartViewController.swift in Sources */,
+				B342D1B62A7C485500F26941 /* Helper.swift in Sources */,
+				B342D1B22A7C484B00F26941 /* UILabel+ext.swift in Sources */,
+				B342D1AA2A7C481C00F26941 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B342D1912A7C46E600F26941 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B342D1922A7C46E600F26941 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B342D1962A7C46E700F26941 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +356,6 @@
 				INFOPLIST_FILE = enigmania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +383,6 @@
 				INFOPLIST_FILE = enigmania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
