@@ -20,6 +20,9 @@
 		B342D1B42A7C485200F26941 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B32A7C485200F26941 /* GameController.swift */; };
 		B342D1B62A7C485500F26941 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B52A7C485500F26941 /* Helper.swift */; };
 		B342D1B82A7C49A800F26941 /* BaksoSapi.otf in Resources */ = {isa = PBXBuildFile; fileRef = B342D1B72A7C49A800F26941 /* BaksoSapi.otf */; };
+		B342D1BA2A7C51B100F26941 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B92A7C51B100F26941 /* Question.swift */; };
+		B342D1BC2A7D6ACD00F26941 /* QuestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1BB2A7D6ACD00F26941 /* QuestionViewCell.swift */; };
+		B342D1BE2A7D872700F26941 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1BD2A7D872700F26941 /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B342D1B32A7C485200F26941 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B342D1B52A7C485500F26941 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B342D1B72A7C49A800F26941 /* BaksoSapi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BaksoSapi.otf; sourceTree = "<group>"; };
+		B342D1B92A7C51B100F26941 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B342D1BB2A7D6ACD00F26941 /* QuestionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCell.swift; sourceTree = "<group>"; };
+		B342D1BD2A7D872700F26941 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		B342D19F2A7C479500F26941 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B342D1B92A7C51B100F26941 /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +103,8 @@
 				B342D1AD2A7C483C00F26941 /* NSLayoutConstraint+ext.swift */,
 				B342D1AF2A7C484400F26941 /* UIImage+ext.swift */,
 				B342D1B12A7C484B00F26941 /* UILabel+ext.swift */,
+				B342D1BB2A7D6ACD00F26941 /* QuestionViewCell.swift */,
+				B342D1BD2A7D872700F26941 /* StartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,10 +221,13 @@
 				B342D18E2A7C46E600F26941 /* SceneDelegate.swift in Sources */,
 				B342D1AC2A7C482300F26941 /* TutorialViewController.swift in Sources */,
 				B342D1B42A7C485200F26941 /* GameController.swift in Sources */,
+				B342D1BE2A7D872700F26941 /* StartView.swift in Sources */,
 				B342D1AE2A7C483C00F26941 /* NSLayoutConstraint+ext.swift in Sources */,
 				B342D1A72A7C481000F26941 /* StartViewController.swift in Sources */,
 				B342D1B62A7C485500F26941 /* Helper.swift in Sources */,
+				B342D1BC2A7D6ACD00F26941 /* QuestionViewCell.swift in Sources */,
 				B342D1B22A7C484B00F26941 /* UILabel+ext.swift in Sources */,
+				B342D1BA2A7C51B100F26941 /* Question.swift in Sources */,
 				B342D1AA2A7C481C00F26941 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

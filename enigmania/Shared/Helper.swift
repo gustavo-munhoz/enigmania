@@ -8,6 +8,8 @@
 import UIKit
 
 class Helper {
+    static let lifeColors = ["appLightGreen", "appGreen", "appYellow", "appOrange", "appDarkRed"]
+    
     static func getFont() -> UIFont {
         return UIFont(name: "BaksoSapi", size: UIFont.labelFontSize)!
     }
