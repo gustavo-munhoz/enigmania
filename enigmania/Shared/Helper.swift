@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Helper {
     static let lifeColors = ["appLightGreen", "appGreen", "appYellow", "appOrange", "appDarkRed"]
@@ -13,4 +14,5 @@ class Helper {
     static func getFont() -> UIFont {
         return UIFont(name: "BaksoSapi", size: UIFont.labelFontSize)!
     }
+
 }

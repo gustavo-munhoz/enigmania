@@ -10,5 +10,5 @@ import Foundation
 struct Question {
     let text: String
     let alternatives: [String]
-    let rightIndex: Int?
+    let rightIndex: [Int]?
 }

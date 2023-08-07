@@ -23,6 +23,16 @@
 		B342D1BA2A7C51B100F26941 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1B92A7C51B100F26941 /* Question.swift */; };
 		B342D1BC2A7D6ACD00F26941 /* QuestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1BB2A7D6ACD00F26941 /* QuestionViewCell.swift */; };
 		B342D1BE2A7D872700F26941 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B342D1BD2A7D872700F26941 /* StartView.swift */; };
+		B342D1C62A7D947600F26941 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = B342D1C52A7D947600F26941 /* SwiftyGif */; };
+		B3EB60CC2A7EA5830099017F /* errou.gif in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60CB2A7EA5830099017F /* errou.gif */; };
+		B3EB60CE2A7EB5F40099017F /* errou-aud.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60CD2A7EB5F40099017F /* errou-aud.wav */; };
+		B3EB60D02A8078430099017F /* acertou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60CF2A8078430099017F /* acertou.mp3 */; };
+		B3EB60D22A809FE70099017F /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB60D12A809FE70099017F /* GameOverViewController.swift */; };
+		B3EB60D82A80A86A0099017F /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60D72A80A86A0099017F /* explosion.mp3 */; };
+		B3EB60DA2A81135D0099017F /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB60D92A81135D0099017F /* VictoryViewController.swift */; };
+		B3EB60DC2A8130EE0099017F /* bg-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60DB2A8130EE0099017F /* bg-music.mp3 */; };
+		B3EB60DE2A8131880099017F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB60DD2A8131880099017F /* MusicPlayer.swift */; };
+		B3EB60E02A8153130099017F /* vitoria.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3EB60DF2A8153130099017F /* vitoria.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,15 @@
 		B342D1B92A7C51B100F26941 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B342D1BB2A7D6ACD00F26941 /* QuestionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCell.swift; sourceTree = "<group>"; };
 		B342D1BD2A7D872700F26941 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B3EB60CB2A7EA5830099017F /* errou.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = errou.gif; path = resources/errou.gif; sourceTree = SOURCE_ROOT; };
+		B3EB60CD2A7EB5F40099017F /* errou-aud.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "errou-aud.wav"; sourceTree = "<group>"; };
+		B3EB60CF2A8078430099017F /* acertou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acertou.mp3; sourceTree = "<group>"; };
+		B3EB60D12A809FE70099017F /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		B3EB60D72A80A86A0099017F /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		B3EB60D92A81135D0099017F /* VictoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
+		B3EB60DB2A8130EE0099017F /* bg-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bg-music.mp3"; sourceTree = "<group>"; };
+		B3EB60DD2A8131880099017F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		B3EB60DF2A8153130099017F /* vitoria.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vitoria.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B342D1C62A7D947600F26941 /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B342D1A52A7C47ED00F26941 /* common */,
-				B342D1A42A7C47E600F26941 /* Fonts */,
+				B342D1A42A7C47E600F26941 /* media */,
 				B342D1A32A7C47DA00F26941 /* Shared */,
 				B342D19F2A7C479500F26941 /* Model */,
 				B342D1A12A7C47B300F26941 /* View */,
@@ -115,6 +135,8 @@
 				B342D1A62A7C481000F26941 /* StartViewController.swift */,
 				B342D1A92A7C481C00F26941 /* QuizViewController.swift */,
 				B342D1AB2A7C482300F26941 /* TutorialViewController.swift */,
+				B3EB60D12A809FE70099017F /* GameOverViewController.swift */,
+				B3EB60D92A81135D0099017F /* VictoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,16 +146,23 @@
 			children = (
 				B342D1B32A7C485200F26941 /* GameController.swift */,
 				B342D1B52A7C485500F26941 /* Helper.swift */,
+				B3EB60DD2A8131880099017F /* MusicPlayer.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		B342D1A42A7C47E600F26941 /* Fonts */ = {
+		B342D1A42A7C47E600F26941 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				B3EB60DF2A8153130099017F /* vitoria.mp3 */,
+				B3EB60DB2A8130EE0099017F /* bg-music.mp3 */,
+				B3EB60D72A80A86A0099017F /* explosion.mp3 */,
+				B3EB60CF2A8078430099017F /* acertou.mp3 */,
+				B3EB60CD2A7EB5F40099017F /* errou-aud.wav */,
+				B3EB60CB2A7EA5830099017F /* errou.gif */,
 				B342D1B72A7C49A800F26941 /* BaksoSapi.otf */,
 			);
-			path = Fonts;
+			path = media;
 			sourceTree = "<group>";
 		};
 		B342D1A52A7C47ED00F26941 /* common */ = {
@@ -161,6 +190,9 @@
 			dependencies = (
 			);
 			name = enigmania;
+			packageProductDependencies = (
+				B342D1C52A7D947600F26941 /* SwiftyGif */,
+			);
 			productName = enigmania;
 			productReference = B342D1882A7C46E600F26941 /* enigmania.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +221,9 @@
 				Base,
 			);
 			mainGroup = B342D17F2A7C46E600F26941;
+			packageReferences = (
+				B342D1C42A7D947600F26941 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+			);
 			productRefGroup = B342D1892A7C46E600F26941 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,7 +240,13 @@
 			files = (
 				B342D1982A7C46E700F26941 /* LaunchScreen.storyboard in Resources */,
 				B342D1952A7C46E700F26941 /* Assets.xcassets in Resources */,
+				B3EB60DC2A8130EE0099017F /* bg-music.mp3 in Resources */,
+				B3EB60D02A8078430099017F /* acertou.mp3 in Resources */,
+				B3EB60D82A80A86A0099017F /* explosion.mp3 in Resources */,
+				B3EB60CE2A7EB5F40099017F /* errou-aud.wav in Resources */,
+				B3EB60CC2A7EA5830099017F /* errou.gif in Resources */,
 				B342D1B82A7C49A800F26941 /* BaksoSapi.otf in Resources */,
+				B3EB60E02A8153130099017F /* vitoria.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,11 +261,14 @@
 				B342D18C2A7C46E600F26941 /* AppDelegate.swift in Sources */,
 				B342D18E2A7C46E600F26941 /* SceneDelegate.swift in Sources */,
 				B342D1AC2A7C482300F26941 /* TutorialViewController.swift in Sources */,
+				B3EB60D22A809FE70099017F /* GameOverViewController.swift in Sources */,
 				B342D1B42A7C485200F26941 /* GameController.swift in Sources */,
 				B342D1BE2A7D872700F26941 /* StartView.swift in Sources */,
 				B342D1AE2A7C483C00F26941 /* NSLayoutConstraint+ext.swift in Sources */,
 				B342D1A72A7C481000F26941 /* StartViewController.swift in Sources */,
 				B342D1B62A7C485500F26941 /* Helper.swift in Sources */,
+				B3EB60DE2A8131880099017F /* MusicPlayer.swift in Sources */,
+				B3EB60DA2A81135D0099017F /* VictoryViewController.swift in Sources */,
 				B342D1BC2A7D6ACD00F26941 /* QuestionViewCell.swift in Sources */,
 				B342D1B22A7C484B00F26941 /* UILabel+ext.swift in Sources */,
 				B342D1BA2A7C51B100F26941 /* Question.swift in Sources */,
@@ -438,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B342D1C42A7D947600F26941 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B342D1C52A7D947600F26941 /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B342D1C42A7D947600F26941 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B342D1802A7C46E600F26941 /* Project object */;
 }

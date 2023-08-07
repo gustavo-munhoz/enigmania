@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class StartView: UIView {
     var handlePlayButtonTap: () -> Void = {}
@@ -112,6 +113,8 @@ class StartView: UIView {
         return view
     }()
     
+    var errorGif: UIImageView?
+    
     private func addSubviews() {
         addSubview(titleHStackView)
         addSubview(buttonHStackView)
@@ -155,16 +158,41 @@ class StartView: UIView {
     }
     
     func animateErrorImage() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.errorImage.alpha = 1.0
-        })
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        do {
+            self.leftButton.isUserInteractionEnabled = false
+            let gif = try UIImage(gifName: "errou.gif")
+            self.errorGif = UIImageView(gifImage: gif, loopCount: 2)
+            self.errorGif?.translatesAutoresizingMaskIntoConstraints = false
+            self.errorImage.addSubview(self.errorGif!)
+
+            errorImage.addSubview(errorGif!)
+            
+            errorGif!.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 390).setActive()
+            errorGif!.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -290).setActive()
+            errorGif!.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -110).setActive()
+            errorGif!.topAnchor.constraint(equalTo: topAnchor, constant: 175).setActive()
+            
+            
             UIView.animate(withDuration: 0.5, animations: {
-                self.errorImage.alpha = 0.0
+                self.errorImage.alpha = 1.0
             })
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.errorImage.alpha = 0.0
+                    self.leftButton.isUserInteractionEnabled = true
+                })
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.errorGif?.removeFromSuperview()
+                }
+            }
+            
+            
+        } catch {
+            print(error)
         }
     }
+
     
     func updateLivesLabel(_ lives: Int) {
         livesLabel.text = "VIDAS: \(lives)"
@@ -172,6 +200,6 @@ class StartView: UIView {
     }
     
     func shouldShowLivesLabel(_ value: Bool) {
-        livesLabel.isHidden = value
+        livesLabel.isHidden = !value
     }
 }
