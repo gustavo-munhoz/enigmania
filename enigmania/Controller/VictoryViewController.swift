@@ -8,6 +8,10 @@
 import UIKit
 
 class VictoryViewController: UIViewController {
+    
+    let wp = UIScreen.main.bounds.width / 844
+    let hp = UIScreen.main.bounds.height / 390
+    
     private lazy var backgroundView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "victory")
@@ -61,14 +65,16 @@ class VictoryViewController: UIViewController {
     }
     
     private func layoutSubviews() {
-        backgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).setActive()
-        backgroundView.centerYAnchor.constraint(equalTo: view.centerYAnchor).setActive()
+        backgroundView.topAnchor.constraint(equalTo: view.topAnchor).setActive()
+        backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).setActive()
+        backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor).setActive()
+        backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor).setActive()
         
         playAgainButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).setActive()
         playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).setActive()
         
-        smileButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40).setActive()
-        smileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100).setActive()
+        smileButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: wp * 40).setActive()
+        smileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: wp * -100).setActive()
     }
     
     @objc func handlePlayAgainTap() {

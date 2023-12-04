@@ -27,8 +27,8 @@ class GameController {
             rightIndex: []
         ),
         Question(
-            text: "Qual a origem do \"Sim!\"?",
-            alternatives: ["OPERATIONAL SYSTEM", "Papanduva", "Não!", "NÃO SEI?"],
+            text: "Onde começa o \"Sim!\"?",
+            alternatives: ["ésse", "Papanduva", "Não!", "NÃO SEI?"],
             rightIndex: [0]
         ),
         Question(
