@@ -53,8 +53,10 @@ class GameOverViewController: UIViewController {
     }
     
     private func layoutSubviews() {
-        backgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).setActive()
-        backgroundView.centerYAnchor.constraint(equalTo: view.centerYAnchor).setActive()
+        backgroundView.topAnchor.constraint(equalTo: view.topAnchor).setActive()
+        backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).setActive()
+        backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor).setActive()
+        backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor).setActive()
         
         playAgainButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).setActive()
         playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).setActive()

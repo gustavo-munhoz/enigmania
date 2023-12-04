@@ -12,6 +12,9 @@ class QuizViewController: UIViewController {
     private let screenHeight = UIScreen.main.bounds.size.height
     private let screenWidth = UIScreen.main.bounds.size.width
     
+    let wp = UIScreen.main.bounds.width / 844
+    let hp = UIScreen.main.bounds.height / 390
+    
     private var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -21,7 +24,7 @@ class QuizViewController: UIViewController {
         navigationItem.setHidesBackButton(true, animated: false)
         
         addSubviews()
-        layoutSubviews()
+        setupConstraints()
         setupSubscriptions()
         errorImage.alpha = 0.0
     }
@@ -31,9 +34,12 @@ class QuizViewController: UIViewController {
     private lazy var numberLabel: UILabel = {
         let view = UILabel()
         view.text = (GameController.shared.index + 1).description
-        view.font = Helper.getFont().withSize(60)
+        view.font = UIFontMetrics(forTextStyle: .body)
+            .scaledFont(for: Helper.getFont().withSize(wp * 60))
         view.textColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.textAlignment = .center
+        view.adjustsFontSizeToFitWidth = true
         return view
     }()
 
@@ -41,14 +47,16 @@ class QuizViewController: UIViewController {
         let bg = UIImageView(image: UIImage(named: "questionCircle"))
         bg.translatesAutoresizingMaskIntoConstraints = false
         bg.addSubview(numberLabel)
-            
+        bg.contentMode = .scaleAspectFit
+        
         return bg
     }()
     
     private lazy var questionText: UILabel = {
         let view = UILabel()
         view.text = GameController.shared.currentQuestion.value.text
-        view.font = Helper.getFont().withSize(40)
+        view.font = UIFontMetrics(forTextStyle: .largeTitle)
+            .scaledFont(for: Helper.getFont().withSize(wp * 40))
         view.textColor = .black
         view.minimumScaleFactor = 0.5
         view.adjustsFontSizeToFitWidth = true
@@ -66,13 +74,15 @@ class QuizViewController: UIViewController {
         view.delegate = self
         view.dataSource = self
         view.register(QuestionViewCell.self, forCellWithReuseIdentifier: QuestionViewCell.identifier)
+        
         return view
     }()
     
     private lazy var livesLabel: UILabel = {
         let view = UILabel()
         view.text = "VIDAS: \(GameController.shared.lives.value)"
-        view.font = Helper.getFont().withSize(32)
+        view.font = UIFontMetrics(forTextStyle: .largeTitle)
+            .scaledFont(for: Helper.getFont().withSize(wp * 32))
         view.textColor = .black
         view.applyShadowWith(UIColor(named: Helper.lifeColors[5 - GameController.shared.lives.value]))
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -99,10 +109,10 @@ class QuizViewController: UIViewController {
 
             errorImage.addSubview(errorGif!)
             
-            errorGif!.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 390).setActive()
-            errorGif!.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -290).setActive()
-            errorGif!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110).setActive()
-            errorGif!.topAnchor.constraint(equalTo: view.topAnchor, constant: 175).setActive()
+            errorGif!.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: wp * -290).setActive()
+            errorGif!.topAnchor.constraint(equalTo: view.topAnchor, constant: hp * 175).setActive()
+            errorGif!.widthAnchor.constraint(equalToConstant: wp * 91).setActive()
+            errorGif!.heightAnchor.constraint(equalTo: errorGif!.widthAnchor, multiplier: 91/79).setActive()
             
             
             UIView.animate(withDuration: 0.5, animations: {
@@ -124,27 +134,33 @@ class QuizViewController: UIViewController {
         }
     }
     
-    private func layoutSubviews() {
-        questionNumber.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).setActive()
-        questionNumber.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).setActive()
-        questionText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).setActive()
+    private func setupConstraints() {
+        questionNumber.topAnchor.constraint(equalTo: view.topAnchor, constant: hp * 20).setActive()
+        questionNumber.leftAnchor.constraint(equalTo: view.leftAnchor, constant: wp * 20).setActive()
+        questionNumber.widthAnchor.constraint(equalToConstant: wp * 80).setActive()
+        questionNumber.heightAnchor.constraint(equalTo: questionNumber.widthAnchor, multiplier: 82/80).setActive()
         
-        questionText.leftAnchor.constraint(equalTo: questionNumber.rightAnchor, constant: 20).setActive()
-        questionText.centerYAnchor.constraint(equalTo: questionNumber.centerYAnchor, constant: -16).setActive()
+        questionText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: wp * -20).setActive()
         
-        livesLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).setActive()
-        livesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).setActive()
+        questionText.leftAnchor.constraint(equalTo: questionNumber.rightAnchor, constant: wp * 20).setActive()
+        questionText.centerYAnchor.constraint(equalTo: questionNumber.centerYAnchor, constant: wp * -16).setActive()
+        
+        livesLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: hp * -20).setActive()
+        livesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: wp * 20).setActive()
         
         questionCollection.topAnchor.constraint(equalTo: questionText.bottomAnchor).setActive()
         questionCollection.bottomAnchor.constraint(equalTo: livesLabel.topAnchor).setActive()
-        questionCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100).setActive()
-        questionCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100).setActive()
+        questionCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: wp * 100).setActive()
+        questionCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: wp * -100).setActive()
         
         numberLabel.centerXAnchor.constraint(equalTo: questionNumber.centerXAnchor).setActive()
         numberLabel.centerYAnchor.constraint(equalTo: questionNumber.centerYAnchor).setActive()
         
         errorImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).setActive()
         errorImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).setActive()
+        errorImage.leadingAnchor.constraint(equalTo: view.leadingAnchor).setActive()
+        errorImage.trailingAnchor.constraint(equalTo: view.trailingAnchor).setActive()
+        errorImage.heightAnchor.constraint(equalTo: errorImage.widthAnchor, multiplier: 181.6/856.6).setActive()
     }
     
     private func addSubviews() {

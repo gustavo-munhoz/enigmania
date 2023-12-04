@@ -14,5 +14,4 @@ class Helper {
     static func getFont() -> UIFont {
         return UIFont(name: "BaksoSapi", size: UIFont.labelFontSize)!
     }
-
 }

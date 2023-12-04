@@ -10,6 +10,9 @@ import UIKit
 class QuestionViewCell: UICollectionViewCell {
     static let identifier = "QuestionViewCell"
     
+    let wp = UIScreen.main.bounds.width / 844
+    let hp = UIScreen.main.bounds.height / 390
+    
     private lazy var cardImage: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "card")
@@ -21,7 +24,8 @@ class QuestionViewCell: UICollectionViewCell {
     private lazy var cardText: UILabel = {
         let view = UILabel()
         view.textColor = .black
-        view.font = Helper.getFont().withSize(36)
+        view.font = UIFontMetrics(forTextStyle: .largeTitle)
+            .scaledFont(for: Helper.getFont().withSize(wp * 36))
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .center
         view.minimumScaleFactor = 0.5
@@ -49,13 +53,13 @@ class QuestionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         cardImage.centerXAnchor.constraint(equalTo: centerXAnchor).setActive()
         cardImage.centerYAnchor.constraint(equalTo: centerYAnchor).setActive()
-        cardImage.widthAnchor.constraint(equalToConstant: cardImage.image!.size.width).setActive()
-        cardImage.heightAnchor.constraint(equalToConstant: cardImage.image!.size.height).setActive()
+        cardImage.widthAnchor.constraint(equalToConstant: cardImage.image!.size.width * wp).setActive()
+        cardImage.heightAnchor.constraint(equalToConstant: cardImage.image!.size.height * wp).setActive()
         
-        cardText.topAnchor.constraint(equalTo: cardImage.topAnchor, constant: 12).setActive()
-        cardText.bottomAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: -12).setActive()
-        cardText.leadingAnchor.constraint(equalTo: cardImage.leadingAnchor, constant: 12).setActive()
-        cardText.trailingAnchor.constraint(equalTo: cardImage.trailingAnchor, constant: -12).setActive()
+        cardText.topAnchor.constraint(equalTo: cardImage.topAnchor, constant: wp * 12).setActive()
+        cardText.bottomAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: wp * -12).setActive()
+        cardText.leadingAnchor.constraint(equalTo: cardImage.leadingAnchor, constant: wp * 12).setActive()
+        cardText.trailingAnchor.constraint(equalTo: cardImage.trailingAnchor, constant: wp * -12).setActive()
         
     }
     
